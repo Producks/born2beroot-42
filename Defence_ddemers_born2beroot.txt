@@ -1,0 +1,82 @@
+Born2beroot notes Ddemers
+Groups 
+Why Debian over centOS?
+Is more beginner friendly, has more of an active community while centOS is more for corporation.
+
+Difference between Debian and Centos:
+Debian has more regular updates, so it require more attention. But since it get update more frenquently is closer to cutting edge technologie
+CentOS has a commerical support, is more robust and has less frequent updates but bigger updates.
+
+Difference between APT and Aptitude:
+Both of them are package managers, but Aptitude is better version of APT with more commands and visuals.
+
+What is APParmor:
+Is a security software which allow to restrict users with access to programs.
+Use directory path to acces or deny access. //notes add more later.
+AppArmor ("Application Armor") is a Linux kernel security module that allows the system administrator to restrict programs' capabilities with per-program profiles.
+
+SUDO:
+Is a program that give the rights to the users.
+
+cd /var/log/sudo ***nombre de sudo***
+ls -la
+sudo usermod -aG sudo <user>
+Reboot after
+
+UFW:
+Use to allow and block internet ports.
+
+sudo ufw allow <port number>
+sudo ufw status numbered // CHECK STATUS
+sudo ufw delete <rule number>
+
+SSH:
+SSH is a remote secure connexion to transfer and use commands remotly saftetly.
+
+systemctl status ssh
+
+sudo service ssh status
+
+ssh ddemers@127.0.0.1 -p 4242
+
+ssh root@127.0.0.1 -p 4242 can't connect
+
+USER:
+groups <user>
+chage -l <user>
+Add user: sudo adduser <user>
+---
+sudo addgroup evaluating
+sudo usermod -aG evaluating <user>
+getent group evaluating
+
+MAKE USER:
+adduser <user>
+
+
+Hostname:
+hostname to show
+-----
+sudo hostnamectl set-hostname <new name>
+/etc/hosts -> edit 127.0.0.1 <old hostname> nano
+restart
+
+CRONTAB:
+Cron is a service who does line of command with a clock while respecting crontab syntax.
+
+sudo crontab -e -u root
+The script execute the command every 10 minutes which display the asked excercise.
+The star represent *every hour *every day *every month *every day of the week
+Grey area about how the time works
+
+
+EXTRA:
+/etc/pam.d/common-password (nano)
+/etc/login.defs //login info
+lsblk -> show partitons
+What is LVM?
+Is a software of gestion todo later.
+Logical drive are a disk on top of each other
+AWK (awk) is a domain-specific language designed for text processing and typically used as a data extraction and reporting tool.
+
+Sudo service cron stop
